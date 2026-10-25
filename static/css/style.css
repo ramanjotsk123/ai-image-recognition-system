@@ -1,0 +1,260 @@
+:root {
+    color-scheme: light;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    color: #17243a;
+    background: #f4f7fb;
+    font-synthesis: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.container {
+    width: min(1080px, calc(100% - 36px));
+    margin: 0 auto;
+}
+
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e1e8f0;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 70px;
+    gap: 16px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #17243a;
+    font-size: 18px;
+    font-weight: 750;
+    text-decoration: none;
+}
+
+.brand-icon {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border-radius: 11px;
+    color: #ffffff;
+    background: #2457d6;
+    font-size: 15px;
+}
+
+.header-tag {
+    color: #2457d6;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hero {
+    padding: 52px 0 30px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: #2457d6;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 12px 0;
+    font-size: clamp(32px, 5vw, 48px);
+    letter-spacing: -1.5px;
+}
+
+.hero-text {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #607087;
+    line-height: 1.7;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.upload-panel,
+.results-panel,
+.about-panel {
+    border: 1px solid #e1e8f0;
+    border-radius: 18px;
+    background: #ffffff;
+    padding: 24px;
+    box-shadow: 0 8px 28px rgba(28, 47, 77, 0.04);
+}
+
+.section-label {
+    display: block;
+    font-weight: 750;
+}
+
+.helper-text,
+.disclaimer {
+    color: #68788e;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+input[type="file"] {
+    width: 100%;
+    margin: 14px 0;
+    padding: 12px;
+    border: 1px dashed #bac7d9;
+    border-radius: 10px;
+    background: #f8faff;
+}
+
+.preview-placeholder {
+    display: grid;
+    min-height: 210px;
+    place-items: center;
+    padding: 20px;
+    border-radius: 12px;
+    color: #738198;
+    background: #f4f7fb;
+    text-align: center;
+}
+
+.image-preview {
+    display: block;
+    width: 100%;
+    max-height: 330px;
+    margin: 0 auto;
+    object-fit: contain;
+    border-radius: 12px;
+    background: #f4f7fb;
+}
+
+.primary-button {
+    width: 100%;
+    margin-top: 18px;
+    padding: 14px 18px;
+    border: 0;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #2457d6;
+    font: inherit;
+    font-weight: 750;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.primary-button:hover:not(:disabled) {
+    background: #1744b3;
+}
+
+.primary-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+.results-panel h2,
+.about-panel h2 {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.status-message {
+    min-height: 44px;
+    color: #65758b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.results-list {
+    display: grid;
+    gap: 18px;
+}
+
+.prediction-item {
+    padding-bottom: 14px;
+    border-bottom: 1px solid #edf0f5;
+}
+
+.prediction-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 9px;
+    font-size: 14px;
+}
+
+.prediction-label {
+    overflow-wrap: anywhere;
+    font-weight: 650;
+}
+
+.prediction-score {
+    flex-shrink: 0;
+    color: #2457d6;
+    font-weight: 750;
+}
+
+.progress-track {
+    overflow: hidden;
+    height: 8px;
+    border-radius: 99px;
+    background: #e8edf5;
+}
+
+.progress-bar {
+    height: 100%;
+    border-radius: 99px;
+    background: #3b75ed;
+    transition: width 0.4s ease;
+}
+
+.about-panel {
+    margin-top: 22px;
+    line-height: 1.7;
+}
+
+.about-panel p {
+    color: #596a80;
+}
+
+.footer {
+    padding: 30px 0;
+    color: #8190a4;
+    font-size: 12px;
+    text-align: center;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 760px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        padding-top: 36px;
+    }
+
+    .upload-panel,
+    .results-panel,
+    .about-panel {
+        padding: 18px;
+    }
+}
