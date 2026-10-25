@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Image Recognition Studio</title>
+
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <a href="/" class="brand">
+                <span class="brand-icon">AI</span>
+                <span>Vision Studio</span>
+            </a>
+            <span class="header-tag">Computer Vision</span>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">DEEP LEARNING PROJECT</p>
+
+            <h1>AI Image Recognition</h1>
+
+            <p class="hero-text">
+                Upload an image and let a pretrained AI model
+                identify its most likely categories.
+            </p>
+        </section>
+
+        <section class="workspace">
+            <form id="uploadForm" class="upload-panel">
+                <label for="imageInput" class="section-label">
+                    Choose an image
+                </label>
+
+                <p class="helper-text">
+                    JPG, PNG or WEBP. Maximum file size: 5 MB.
+                </p>
+
+                <input
+                    id="imageInput"
+                    name="image"
+                    type="file"
+                    accept="image/jpeg,image/png,image/webp"
+                    required
+                >
+
+                <div id="previewPlaceholder" class="preview-placeholder">
+                    Your selected image will appear here.
+                </div>
+
+                <img
+                    id="imagePreview"
+                    class="image-preview"
+                    alt="Preview of the selected image"
+                    hidden
+                >
+
+                <button
+                    id="predictButton"
+                    class="primary-button"
+                    type="submit"
+                    disabled
+                >
+                    Analyze Image
+                </button>
+            </form>
+
+            <section class="results-panel" aria-labelledby="resultsTitle">
+                <h2 id="resultsTitle">Recognition Results</h2>
+
+                <p id="statusMessage" class="status-message" role="status"
+                   aria-live="polite">
+                    Select an image to begin.
+                </p>
+
+                <div id="resultsList" class="results-list"></div>
+            </section>
+        </section>
+
+        <section class="about-panel">
+            <h2>How it works</h2>
+            <p>
+                The Python backend processes your image with a pretrained
+                MobileNetV2 neural network. JavaScript sends the image to
+                the API and displays the returned predictions.
+            </p>
+            <p class="disclaimer">
+                Predictions are model estimates, not guaranteed facts.
+                The model recognizes categories from its training labels
+                and may misclassify unfamiliar images.
+            </p>
+        </section>
+    </main>
+
+    <footer class="container footer">
+        AI Image Recognition Studio · Python + JavaScript
+    </footer>
+</body>
+</html>
