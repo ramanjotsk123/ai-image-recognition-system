@@ -77,8 +77,4 @@ a new neural network from scratch.
 Predictions may be incorrect, particularly for unfamiliar
 images or objects outside the model's training categories.
 
-## Project Status
 
-Source code uploaded to GitHub.
-Application execution and prediction quality have
-not yet been verified.
